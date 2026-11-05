@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ear Bench</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#20232b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#intervals" aria-label="Ear Bench home">
+      <svg class="brand-mark" viewBox="0 0 28 22" aria-hidden="true"><rect x="0.5" y="0.5" width="27" height="21" rx="3" fill="var(--ivory)" stroke="currentColor"/><path d="M7.5 1v20M14 1v20M20.5 1v20" stroke="currentColor"/><rect x="5" y="1" width="5" height="12" rx="1" fill="currentColor"/><rect x="18" y="1" width="5" height="12" rx="1" fill="currentColor"/></svg>
+      <span class="brand-name">Ear Bench</span>
+    </a>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Training modes"></nav>
+    <div class="top-actions">
+      <div class="goal" id="goal" aria-label="Daily goal"><span class="goal-ring"></span><span class="goal-num">0 / 40</span></div>
+      <button class="pill" id="midiBtn" data-state="off"><span class="pill-dot"></span><span class="pill-text">Connect MIDI</span></button>
+      <button class="pill" id="soundBtn" aria-haspopup="true">Sound</button>
+    </div>
+  </div>
+</header>
+<div class="popover" id="soundPanel" hidden></div>
+
+<main class="layout">
+  <section class="stage" id="stage"></section>
+  <aside class="side" id="side" aria-label="Settings"></aside>
+</main>
+
+<section class="kb-wrap" id="kbWrap" aria-label="Piano keyboard">
+  <div class="kb-scroll"><div class="keyboard" id="keyboard"></div></div>
+</section>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="js/theory.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
